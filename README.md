@@ -1,6 +1,6 @@
 # Summary
 
-<img align="right" src="https://raw.githubusercontent.com/go-design-patterns/go-oops/master/golang-gopher-oop.png">
+<img align="right" src="https://github.com/go-goodies/go_oops/blob/master/golang-gopher-oop.png">
 
 In software engineering, a design pattern is a general reusable solution to a commonly occurring problem within a given context in software design. 
 
