@@ -1,6 +1,8 @@
-# Summary
+# go_oops
 
 <img align="right" src="https://github.com/go-goodies/go_oops/blob/master/golang-gopher-oop.png">
+
+A Go library that implements object oriented programming design patterns.
 
 In software engineering, a design pattern is a general reusable solution to a commonly occurring problem within a given context in software design. 
 
