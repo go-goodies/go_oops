@@ -6,8 +6,6 @@ A Go library that implements object oriented programming design patterns.
 
 In software engineering, a design pattern is a general reusable solution to a commonly occurring problem within a given context in software design. 
 
-Whereas a design pattern is not a finished design that can be transformed directly into source code, this repo provide implementations for the Go programming language.
-
 Patterns are formalized best practices that the programmer can use to solve common problems when designing an application or system. 
 
 Object-oriented design patterns typically show relationships and interactions between classes or objects, without specifying the final application classes or objects that are involved. 
