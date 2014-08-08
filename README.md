@@ -58,7 +58,7 @@ Most of these design patterns are specifically concerned with communication betw
 
 See interface documenation at [package go_ops] (http://godoc.org/github.com/go-goodies/go_oops)
 
-See companion article at [Web Server] (http://l3x.github.io/golang-code-examples/2014/08/05/web-server.html)
+See companion article at [Golang Code Examples - Web Server] (http://l3x.github.io/golang-code-examples/2014/08/05/web-server.html)
 
 This is the repository that I will refer to reuse OOP constructs for various Go projects.
 
