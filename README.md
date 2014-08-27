@@ -2,7 +2,9 @@
 
 <img align="right" src="https://github.com/go-goodies/go_oops/blob/master/golang-gopher-oop.png">
 
-A Go library that implements object oriented programming design patterns.
+This is a collection of Go code samples that illustrate object oriented programming design patterns.
+
+Most samples are not production ready.  (Those that are can be found in [go_utils] (https://github.com/go-goodies/go_utils)).
 
 In software engineering, a design pattern is a general reusable solution to a commonly occurring problem within a given context in software design. 
 
@@ -58,7 +60,7 @@ Most of these design patterns are specifically concerned with communication betw
 
 See interface documenation at [package go_ops] (http://godoc.org/github.com/go-goodies/go_oops)
 
-See companion article at [Golang Code Examples - Web Server] (http://l3x.github.io/golang-code-examples/2014/08/05/web-server.html)
+See example usage of Singleton at [Golang Code Examples] (http://l3x.github.io/golang-code-examples/2014/08/05/http-server.html)
 
 This is the repository that I will refer to reuse OOP constructs for various Go projects.
 
@@ -76,4 +78,6 @@ In either case, thanks in advance for applying your corrections and/or making co
 * [Object-oriented Programming (OOP)] (http://en.wikipedia.org/wiki/Object-oriented)
 * [Applicaiton Development with Lex Sheehan] (http://lexsheehan.blogspot.com/)
 
-This work is licensed under the [Creative Commons Attribution 3.0 Unported License.] (http://creativecommons.org/licenses/by/3.0/)
+
+### License
+This project is licensed under a Simplified BSD license. Please read the [LICENSE file](LICENSE).
