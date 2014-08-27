@@ -75,3 +75,5 @@ In either case, thanks in advance for applying your corrections and/or making co
 * [Software design pattern] (http://en.wikipedia.org/wiki/Software_design_pattern)
 * [Object-oriented Programming (OOP)] (http://en.wikipedia.org/wiki/Object-oriented)
 * [Applicaiton Development with Lex Sheehan] (http://lexsheehan.blogspot.com/)
+
+This work is licensed under the [Creative Commons Attribution 3.0 Unported License.] (http://creativecommons.org/licenses/by/3.0/)
