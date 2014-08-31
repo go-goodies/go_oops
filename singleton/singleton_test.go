@@ -14,12 +14,8 @@ func TestRunner(t *testing.T) {
 }
 
 func (s *mySuite) TestSingleton() {
-
 	var AppContext *Singleton
-
 	AppContext = NewSingleton()
 	AppContext.Data["username"] = "joesample"
-
 	s.Equal(AppContext.Data["username"], "joesample")
-
 }
