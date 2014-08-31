@@ -1,4 +1,4 @@
-package go_oops
+package singleton
 
 type Obj map[string]interface{}
 
