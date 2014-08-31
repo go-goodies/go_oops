@@ -1,4 +1,4 @@
-package go_oops
+package factory_method_with_registry
 
 // maker_iface defines makeWidget and registerWidget methods
 type maker_iface interface {
@@ -23,7 +23,7 @@ func (self *factory) create(factory maker_iface, w widget) widget_iface {
 	return widget
 }
 
-// widget is the domain type that this example maniuplates
+// widget is the domain type that this example manipulates
 type widget struct {
 	name string
 	count int

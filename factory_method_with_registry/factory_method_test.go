@@ -1,4 +1,4 @@
-package go_oops
+package factory_method_with_registry
 
 import (
 	"testing"
@@ -31,5 +31,3 @@ func (s *mySuite) TestFactoryMethod() {
 		s.Equal(widget.getInfo(), expected_widgets[i])
 	}
 }
-
-
