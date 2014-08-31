@@ -55,7 +55,7 @@ func (d *WidgetB) IsEqual(a Widget_iface) bool {
 	equal := true
 	a.Each(func(item interface{}) bool {
 		_, equal = d.m[item]
-		return equal // if false, Each() will end
+		return equal  // if false Each() will return
 	})
 	return equal
 }

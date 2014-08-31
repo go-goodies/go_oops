@@ -48,24 +48,21 @@ func (d *dataA) Size() int {
 
 // IsEqual tests whether d and a have the same items
 func (d *WidgetA) IsEqual(a Widget_iface) bool {
-
-	// return false if they are no the same size
 	if sameSize := len(d.m) == a.Size(); !sameSize {
 		return false
 	}
-
 	if a.GetInfo().String() != d.GetInfo().String() {
 		return false
 	}
 	equal := true
 	a.Each(func(item interface{}) bool {
 		_, equal = d.m[item]
-		return equal // if false, Each() will end
+		return equal  // if false Each() will return
 	})
 	return equal
 }
 
-// IsEmpty indicates whether the Set is empty.
+// IsEmpty indicates whether the Set is empty
 func (d *dataA) IsEmpty() bool {
 	return d.Size() == 0
 }
