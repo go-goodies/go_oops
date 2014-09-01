@@ -26,7 +26,7 @@ func (d *dataA) Add(items ...interface{}) {
 		return
 	}
 	for _, item := range items {
-		d.m[item] = NewEmptyStruct
+		d.m[item] = struct{}{}
 	}
 }
 
@@ -35,7 +35,6 @@ func (d *dataA) Remove(items ...interface{}) {
 	if len(items) == 0 {
 		return
 	}
-
 	for _, item := range items {
 		delete(d.m, item)
 	}

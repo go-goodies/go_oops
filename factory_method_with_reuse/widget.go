@@ -8,13 +8,13 @@ import (
 type WidgetType int
 
 const (
-	Widget_A = iota
+	Widget_A = iota  // start at 0 and increment by 1
 	Widget_B
 )
 
 // Widget is the domain type that this example manipulates
 type Widget struct {
-	WidgetInfo
+	WidgetInfo		// Anonymous field
 }
 
 // WidgetInfo is an Embedded type that contains widget data
@@ -41,8 +41,8 @@ func (wi WidgetInfo) String() string {
 
 // Widget_iface is describing a Widget. Widgets are an unordered, unique list of values.
 type Widget_iface interface {
-	SetInfo(id int, name string)	// common
-	GetInfo() WidgetInfo			// common
+	SetInfo(id int, name string)	// reuse
+	GetInfo() WidgetInfo			// reuse
 	Add(items ...interface{})
 	Remove(items ...interface{})
 	IsEqual(a Widget_iface) bool
@@ -61,9 +61,6 @@ func (s WidgetType) String() string {
 	return ""
 }
 
-// helpful to not write everywhere struct{}{}
-var NewEmptyStruct = struct{}{}
-
 // Create a new Widget interface based on WidgetType and set WidgetInfo
 func New(wt WidgetType, wi WidgetInfo) Widget_iface {
 	switch wt {
@@ -74,5 +71,3 @@ func New(wt WidgetType, wi WidgetInfo) Widget_iface {
 	}
 	return nil
 }
-
-
