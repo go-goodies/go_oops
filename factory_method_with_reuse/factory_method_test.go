@@ -36,8 +36,12 @@ func (s *mySuite) TestRemove() {
 	wa.Add("thinga", "ma", "bop")
 	wa.Remove("bop")
 	s.Equal(wa.Size(), 2)
+
+	wa.Remove("ma")
+	s.Equal(wa.Size(), 1)
+
 	wa.Remove("xxx")
-	s.Equal(wa.Size(), 2)
+	s.Equal(wa.Size(), 1)
 }
 
 func (s *mySuite) TestIsEqual() {
