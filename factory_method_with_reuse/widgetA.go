@@ -53,25 +53,10 @@ func (d *WidgetA) IsEqual(a Widget_iface) bool {
 	if a.GetInfo().String() != d.GetInfo().String() {
 		return false
 	}
-	equal := true
-	a.Each(func(item interface{}) bool {
-		_, equal = d.m[item]
-		return equal  // if false Each() will return
-	})
-	return equal
+	return true
 }
 
 // IsEmpty indicates whether the Set is empty
 func (d *dataA) IsEmpty() bool {
 	return d.Size() == 0
-}
-
-// Iterate over each item, calling the function (f) for each item
-// Continue until all items in the Set have been visited, or if the false is returned
-func (d *dataA) Each(f func(item interface{}) bool) {
-	for item := range d.m {
-		if !f(item) {
-			break
-		}
-	}
 }

@@ -47,30 +47,16 @@ func (d *dataB) Size() int {
 
 // IsEqual tests whether d and a have the same items
 func (d *WidgetB) IsEqual(a Widget_iface) bool {
-	// return false if they are no the same size
 	if sameSize := len(d.m) == a.Size(); !sameSize {
 		return false
 	}
-	equal := true
-	a.Each(func(item interface{}) bool {
-		_, equal = d.m[item]
-		return equal  // if false Each() will return
-	})
-	return equal
+	if a.GetInfo().String() != d.GetInfo().String() {
+		return false
+	}
+	return true
 }
 
 // IsEmpty indicates whether the Set is empty
 func (d *dataB) IsEmpty() bool {
 	return d.Size() == 0
 }
-
-// Iterate over each item, calling the function (f) for each item
-// Continue until all items in the Set have been visited, or if the false is returned
-func (d *dataB) Each(f func(item interface{}) bool) {
-	for item := range d.m {
-		if !f(item) {
-			break
-		}
-	}
-}
-

@@ -47,7 +47,6 @@ type Widget_iface interface {
 	Remove(items ...interface{})
 	IsEqual(a Widget_iface) bool
 	Size() int
-	Each(func(interface{}) bool)
 }
 
 // String displays the string name of the specified widget
