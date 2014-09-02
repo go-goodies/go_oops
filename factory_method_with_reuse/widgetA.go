@@ -1,6 +1,6 @@
 package factory_method_with_reuse
 
-// WidgetA's internal data set
+// WidgetA's internal data map
 type dataA struct {
 	m map[interface{}]struct{}
 }
@@ -11,7 +11,7 @@ type WidgetA struct {
 	dataA
 }
 
-// Create WidgetA data and set
+// Create WidgetA data map
 func newWidgetA(wi WidgetInfo) *WidgetA {
 	w := &WidgetA{}
 	w.WidgetInfo = wi
@@ -20,7 +20,7 @@ func newWidgetA(wi WidgetInfo) *WidgetA {
 	return w
 }
 
-// Add any number of items to the set
+// Add any number of items to the map
 func (d *dataA) Add(items ...interface{}) {
 	if len(items) == 0 {
 		return
@@ -30,7 +30,7 @@ func (d *dataA) Add(items ...interface{}) {
 	}
 }
 
-// Remove items from the set
+// Remove items from the data map
 func (d *dataA) Remove(items ...interface{}) {
 	if len(items) == 0 {
 		return
