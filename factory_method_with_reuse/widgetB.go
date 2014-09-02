@@ -1,6 +1,6 @@
 package factory_method_with_reuse
 
-// WidgetB's internal data set
+// WidgetB's internal data map
 type dataB struct {
 	m map[interface{}]struct{}
 }
@@ -11,7 +11,7 @@ type WidgetB struct {
 	dataA
 }
 
-// Create WidgetB data and set
+// Create WidgetB data (deferred creation of a widget)
 func newWidgetB(wi WidgetInfo) *WidgetB {
 	w := &WidgetB{}
 	w.WidgetInfo = wi
@@ -20,7 +20,7 @@ func newWidgetB(wi WidgetInfo) *WidgetB {
 	return w
 }
 
-// Add any number of items to the set
+// Add any number of items to data map
 func (d *dataB) Add(items ...interface{}) {
 	if len(items) == 0 {
 		return
@@ -30,7 +30,7 @@ func (d *dataB) Add(items ...interface{}) {
 	}
 }
 
-// Remove items from the set
+// Remove items from the map
 func (d *dataB) Remove(items ...interface{}) {
 	if len(items) == 0 {
 		return
@@ -40,7 +40,7 @@ func (d *dataB) Remove(items ...interface{}) {
 	}
 }
 
-// Size returns the number of items in a set
+// Size returns the number of items
 func (d *dataB) Size() int {
 	return len(d.m)
 }
@@ -56,7 +56,7 @@ func (d *WidgetB) IsEqual(a Widget_iface) bool {
 	return true
 }
 
-// IsEmpty indicates whether the Set is empty
+// IsEmpty indicates whether the map is empty
 func (d *dataB) IsEmpty() bool {
 	return d.Size() == 0
 }

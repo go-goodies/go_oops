@@ -40,7 +40,7 @@ func (d *dataA) Remove(items ...interface{}) {
 	}
 }
 
-// Size returns the number of items in a set
+// Size returns the number of items
 func (d *dataA) Size() int {
 	return len(d.m)
 }
@@ -56,7 +56,7 @@ func (d *WidgetA) IsEqual(a Widget_iface) bool {
 	return true
 }
 
-// IsEmpty indicates whether the Set is empty
+// IsEmpty indicates whether the map is empty
 func (d *dataA) IsEmpty() bool {
 	return d.Size() == 0
 }
