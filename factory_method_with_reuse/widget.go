@@ -70,3 +70,4 @@ func New(wt WidgetType, wi WidgetInfo) Widget_iface {
 	}
 	return nil
 }
+
